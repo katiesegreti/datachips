@@ -1,0 +1,227 @@
+<!doctype html>
+<html> 
+<head>
+  <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+  <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+  <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+  <script src="js/angular.min.js"></script>
+ <script src='js/mgrData.js'></script>
+  <link rel="stylesheet" href="https://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+  <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="chartstyle.css">
+  <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+  <script type="text/javascript" src="js/chartscript.js"></script>
+  <script src='js/mgrData.js'></script>
+  <script src='js/controllers/mgrController.js'></script>
+  <script src='js/controllers/consController.js'></script>
+ </head>
+<body>
+<div id="chartHeading">
+  <div class="chartHeaderTop">
+    <h1>Q2 2017 quarterly mandate report</h1>
+  </div>
+
+    <div id="selector">Select fund location:
+    &nbsp;&nbsp;&nbsp;
+    <label><input type="radio" value="0" name="dataset" checked="checked" onclick="selectDataset(0);" /> All</label>
+    &nbsp;&nbsp;&nbsp;
+    <label><input type="radio" value="1" name="dataset" onclick="selectDataset(1);" /> U.S.</label>
+    &nbsp;&nbsp;&nbsp;
+    <label><input type="radio" value="2" name="dataset" onclick="selectDataset(2);" /> Europe</label>
+  &nbsp;&nbsp;&nbsp;
+    <label><input type="radio" value="3" name="dataset" onclick="selectDataset(3);" /> Asia</label>
+  &nbsp;&nbsp;&nbsp;
+    <label><input type="radio" value="4" name="dataset" onclick="selectDataset(4);" /> Oceania</label>
+
+</div>
+</div>
+<div class="chartcontainer">
+  <div class="report">
+    <div class="reportsection" id="quarterly">
+      <ul>
+        <li class="active">quarterly summary</li>
+        <li><a href="#fourquarters">4 quarter trends</a></li>
+        <li><a href="#yearly">12 month summary</a></li>
+        <li><a href="#threeyears">3 year trends</a></li>
+        <li><a href="#managers">top asset managers</a></li>
+        
+        
+      </ul>
+      <div class="row">
+        <div class="col-md-6 chartbox">
+          <div class="chart" id="qMandateChartdiv"></div>
+        </div>
+        <div class="col-md-6 chartbox">
+          <div class="chart" id="topMandatesQchartdiv"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 chartbox">
+          <div class="chart" id="comboRegionQchartdiv"></div>
+        </div>
+        <div class="col-md-6 chartbox">
+          <div class="chart" id="comboClassQchartdiv"></div>   
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 chartbox">
+          <div class="chart" id="clusterNumQchartdiv"></div>
+        </div>
+        <div class="col-md-6 chartbox">
+          <div class="chart" id="clusterValueQchartdiv"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 chartbox">
+          <div class="chart" id="avgSizeRegionQchartdiv"></div>
+        </div>
+        <div class="col-md-6 chartbox">
+          <div class="chart" id="avgSizeClassQchartdiv"></div>    
+        </div>
+      </div>
+    </div>
+    <div class="reportsection" id="fourquarters">
+      <ul>
+        <li><a href="#quarterly">quarterly summary</a></li>
+        <li class="active">4 quarter trends</li>
+        <li><a href="#yearly">12 month summary</a></li>
+        <li><a href="#threeyears">3 year trends</a></li>
+        <li><a href="#managers">top asset managers</a></li>
+        
+        
+      </ul>
+      <div class="row">
+        <div class="col-md-12 chartbox">
+          <div class="chartLong" id="mekkoNumberQchartdiv"></div>
+        </div>
+        <div class="col-md-12 chartbox">
+          <div class="chartLong" id="mekkoValueQchartdiv"></div>    
+        </div>
+      </div>
+    </div>
+    <div class="reportsection" id="yearly">
+      <ul>
+        <li><a href="#quarterly">quarterly summary</a></li>
+        <li><a href="#fourquarters">4 quarter trends</a></li>
+        <li class="active">12 month summary</li>
+        <li><a href="#threeyears">3 year trends</a></li>
+        <li><a href="#managers">top asset managers</a></li>
+        
+      </ul>
+      <div class="row">
+        <div class="col-md-6 chartbox">
+          <div class="chart" id="comboRegionYchartdiv"></div>
+        </div>
+        <div class="col-md-6 chartbox">
+          <div class="chart" id="comboClassYchartdiv"></div>    
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 chartbox">
+          <div class="chart" id="clusterNumYchartdiv"></div>
+        </div>
+        <div class="col-md-6 chartbox">
+          <div class="chart" id="clusterValueYchartdiv"></div>
+        </div>
+      </div>
+    </div>
+    <div class="reportsection" id="threeyears">
+      <ul>
+        <li><a href="#quarterly">quarterly summary</a></li>
+        <li><a href="#fourquarters">4 quarter trends</a></li>
+        <li><a href="#yearly">12 month summary</a></li>
+        <li class="active">3 year trends</li>
+        <li><a href="#managers">top asset managers</a></li>
+        
+      </ul>
+        <div class="row">
+          <div class="col-md-12 chartbox">
+          <div class="chartLong" id="mekkoNumberYchartdiv"></div>
+        </div>
+        <div class="col-md-12 chartbox">
+          <div class="chartLong" id="mekkoValueYchartdiv"></div>    
+        </div>
+      </div>
+    </div>
+    
+    <div class="reportsection" id="managers">
+      <ul>
+        <li><a href="#quarterly">quarterly summary</a></li>
+        <li><a href="#fourquarters">4 quarter trends</a></li>
+        <li><a href="#yearly">12 month summary</a></li>
+        <li><a href="#threeyears">3 year trends</a></li>
+        <li class="active">top asset managers</li>
+        
+      </ul>
+      <div class="row" ng-app="mgrData">
+        <div class="col-md-6 chartbox">
+          <div class="mgrtable" >
+            <h3>Top Asset Managers: Q2 2017</h3>
+
+            <table ng-controller="mgrController">
+              <col width="20">
+              <col width="20">
+              <col width=175>
+              <col width="20">
+              <col width="20">
+              <tr>
+                <th>Rank</th>
+                <th>Previous Rank</th>
+                <th >Asset Manager</th>
+                <th># of mandates</th>
+                <th>Disclosed Value ($millions)</th>
+              </tr>
+              <tr ng-repeat="mgr in mgrs">
+                <td> {{ mgr.rank }}</td>
+                <td> {{ mgr.lastQ }}</td>
+                <td class="leftcol"> {{ mgr.mgrName }}</td>
+                <td> {{ mgr.numMandates}}</td>
+                <td> {{ mgr.discValue | number }}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-6 chartbox">  
+          <div class="mgrtable">
+            <h3>Top Asset Managers: Year ending 6/30/17</h3>
+
+            <table ng-controller="mgrController">
+              <col width="20">
+              <col width="20">
+              <col width=175>
+              <col width="20">
+              <col width="20">
+              <tr>
+                <th>Rank</th>
+                <th>Previous Rank</th>
+                <th >Search Consultant</th>
+                <th># of mandates</th>
+                <th>Disclosed Value ($millions)</th>
+              </tr>
+              <tr ng-repeat="mgrY in mgrYs">
+                <td> {{ mgrY.rank }}</td>
+                <td> {{ mgrY.lastQ }}</td>
+                <td class="leftcol"> {{ mgrY.mgrName }}</td>
+                <td> {{ mgrY.numMandates}}</td>
+                <td> {{ mgrY.discValue | number }}</td>
+              </tr>
+            </table>
+          </div> 
+        </div>
+      </div>
+    </div>
+        
+  </div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78679780-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
