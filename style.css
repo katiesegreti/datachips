@@ -1,0 +1,471 @@
+/* colors: grey: #6D6D6F light green: #e1f1ef pink: #ea27c2 ; yellow: #FFFF1A; */
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Verdana', sans-serif;
+  font-size: 16px;
+}
+
+
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 3em;
+  color: #6D6D6F;
+}
+
+h2 span {
+  background-color: #FFFF66;
+}
+
+h2 a,
+h2 a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+h2 a:hover {
+  background-color: #FF8860;
+  text-decoration: none;
+  color: black;
+
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+/* Header */
+.header {
+  padding-bottom: 0px;  
+  background-color: #6D6D6F;
+
+}
+
+
+
+
+.header h2 span {
+  background-color: #ea27c2;
+
+}
+
+
+
+.header h2 a:hover {
+  background-color: #FF8860;
+  color: #E1F1EF;
+  } 
+
+
+
+.nav-pills li a {
+  color: #E1F1EF;
+  
+  margin-top: 30px;
+ 
+}
+
+.nav-pills li.active a,
+.nav-pills li.active a:hover {
+
+  background-color:#ea27c2;
+  color:#fff;
+}
+
+.section .btn:hover,
+.nav-pills li a:hover {
+  background-color: #FFFF1A;
+  color: black;
+
+}
+
+/* Jumbotron */
+.jumbotron {
+  height: 100px;
+  color: white;
+    background: url(images/jumbotron4.jpg) repeat ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.jumbotron h1 {
+  text-align: right;
+  font-size: 82px;
+  margin: 2px 2px 2px 2px;
+  padding-left: 100px;
+  color: #E1F1EF;
+}
+
+/* Banner */
+.banner, .supporting {
+  text-align: center;
+  
+  padding-bottom: 10px;
+}
+
+.banner {
+  background-color: #ea27c2;
+  height: 80px; 
+  color: #fff;
+}
+
+.banner h2 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #ffff1a;
+}
+.banner .btn {
+  margin-top: 15px;
+}
+}.multiColumn {
+    -moz-column-count: 3;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 20px;
+    column-count: 3;
+    column-gap: 20px;
+  }
+.tvList {
+
+    padding: 10px 5px;
+}
+
+.tvList li a {
+  color: white;
+  background-color: #6D6D6F;
+  float: left;
+  padding: 2px 30px;
+  margin: 0px 1px 10px 1px;
+  text-decoration: none;
+ 
+}
+
+.tvList li.active a,
+.tvList li a:hover,
+.tvList li.active a:hover {
+  background-color:#ea27c2;
+  color:#fff;
+}
+
+.highlight {
+  color: #ea27c2;
+}
+
+
+
+.multiColumn {
+    -moz-column-count: 3;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 20px;
+    column-count: 3;
+    column-gap: 20px;
+  }
+
+.multiColumn2 {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    -webkit-column-width: 400px;
+     -moz-column-width: 400px;
+          column-width: 400px;
+}
+
+
+
+
+.chartList li a {
+  color: #ea27c2;
+  float: left;
+  padding: 2px 30px;
+  margin: 0px 15px -5px 1px;
+  text-decoration: none;
+}
+
+
+
+.chartList li.active a,
+.chartList li.active a:hover {
+  background-color:#ea27c2;
+  color:#fff;
+}
+.chartList li a:hover {
+  background-color: #FFFF1A;
+  color: black;
+
+}
+
+.section .row {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  margin-bottom: 80px;
+}
+
+
+.section {
+background-color: #e1f1ef;
+
+}
+
+.section h3 {
+  color: #6D6D6F;
+  font-weight: bold;
+}
+
+
+.section img {
+  margin-top: 20px;
+  padding-left: 0px;
+  border: 1px solid black ;  
+}
+
+
+
+
+/* Media Queries */
+@media (max-width: 680px) {
+  .header h1 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .nav {
+    float: none;
+    margin: 0 auto;
+  }
+  .banner {
+    height: 220px;
+  }
+
+  .nav-pills li:first-child a  {
+    margin-left: 0;
+  }
+}
+
+.btn {
+  background-color: #6D6D6F;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 18px;
+  display: none;
+  
+  
+}
+
+
+
+.page-header {
+  text-align: center;
+}
+
+.page-header .row h3 {
+  color: red;
+  font-size: 20px;
+  
+}
+
+.page-header ul {
+  list-style-type: none;
+  padding: 0
+}
+
+
+
+.footer {
+  background-color: #6D6D6F;
+  padding: 75px;
+  text-align: center;
+
+}
+
+.footer  a {
+  color: #ea27c2;
+}
+
+
+
+.highlight1 {
+  border: 1px solid #FFFF1A;
+}
+
+
+
+
+.section .col-md-12 h3 {
+  color: #ea27c2;
+  font-weight: bold;
+}
+
+.tagline h3:hover {
+  color: #ea27c2;
+}
+
+.hidden {
+  display: none;
+}
+
+.chart {
+  width   : 100%;
+  height    : 400px;
+  font-size : 11px;
+  padding: 0px;
+  margin-bottom: 30px;
+}
+.chartLong {
+  width   : 100%;
+  height    : 275px;
+  font-size : 11px;
+  padding: 0px;
+  margin-bottom: 30px;
+}
+
+
+.chartbox {
+  border: 1px solid lightgrey;
+}
+
+.chartHeader {
+ 
+}
+
+.chartcontainer {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid lightgrey;
+}
+
+td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid lightgrey;
+}
+
+
+
+.leftcol {
+  text-align: left;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+tr:hover {
+  background-color: #ffffcc;
+}
+
+th {
+    background-color: #68B7DC;
+    margin-left: 10px;
+    border: 1px solid lightgrey;
+}
+
+.mgrtable {
+  margin-left: 10px;
+}
+
+.reportsection {
+  padding-bottom: 30px;
+}
+
+.hicontainer {
+  
+  margin: 0 auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: #f0f5f5;
+  height: 1000px;
+}
+
+.circlez:nth-child(even) {
+  background-color: #ffff00;
+  float: right;
+  height: 200px;
+  width: 200px;
+  margin-right: 20px;
+}
+.circlez:nth-child(odd) {
+  background-color: #ff3399;
+  float: left;
+  height: 300px;
+  width: 300px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.circlez {
+  border-radius: 50%;
+  
+  text-align: center;
+  margin-bottom: 10px;
+ }
+.c1 {
+  height: 50px;
+}
+
+.hello {
+  padding: 15px;
+  margin-top: 20px;
+  font-size: 35px;
+}
+
+.hiAll {
+   padding: 10px;
+}
+
+
+svg {
+        background-color: none;
+        margin-left: 5px;
+        margin-top: 5px;
+      }
+.ghost {
+  fill: black; 
+}
+.btn1, .btn2 {
+  background-color: #ff0066;
+  color: #ebebf1;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 10px;
+  font-size: 15px;
+  text-decoration: none;
+  margin-left: 0px;
+}
+.btn2 {
+  display: none;
+}
+.btn1:hover, .btn2:hover {
+  background-color: #00ccff;
+}
+.graphic {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 30px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+.clicked {
+  background-color: #bfbfbf;
+}
+.clicked:hover {
+  background-color: #bfbfbf;
+}
+.dashed {
+  stroke-dasharray: "10,10" d="M5 40 l215 0";
+}
